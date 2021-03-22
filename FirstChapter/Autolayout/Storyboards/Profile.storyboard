@@ -16,33 +16,86 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Kz-Rg-BHI" customClass="ProfileImageView" customModule="Autolayout" customModuleProvider="target">
-                                <rect key="frame" x="127" y="64" width="160" height="159"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xFw-zh-iJC">
+                                <rect key="frame" x="0.0" y="44" width="414" height="285"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="D29-OG-QNW">
+                                        <rect key="frame" x="20" y="26" width="374" height="251"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="8dU-XC-6YA">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="205"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WxG-Qf-SAP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="160"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZC9-3h-Wgh">
+                                                                <rect key="frame" x="0.0" y="0.0" width="107" height="160"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </view>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Kz-Rg-BHI" customClass="ProfileImageView" customModule="Autolayout" customModuleProvider="target">
+                                                                <rect key="frame" x="107" y="0.0" width="160" height="160"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="160" id="Aou-qS-auq"/>
+                                                                    <constraint firstAttribute="width" secondItem="2Kz-Rg-BHI" secondAttribute="height" multiplier="1:1" id="hTR-lL-9nR"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hasBorder" value="YES"/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="borderShape" value="squircle"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </imageView>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DWI-Wz-pqi">
+                                                                <rect key="frame" x="267" y="0.0" width="107" height="160"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="DWI-Wz-pqi" firstAttribute="width" secondItem="ZC9-3h-Wgh" secondAttribute="width" id="42j-2E-lEi"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5B-Tw-UCo" customClass="ProfileNameLabel" customModule="Autolayout" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="176" width="374" height="29"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BD6-Pt-eyx">
+                                                <rect key="frame" x="0.0" y="221" width="374" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SyP-jO-FWa">
+                                                        <rect key="frame" x="0.0" y="0.0" width="124.5" height="30"/>
+                                                        <state key="normal" title="Message"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzm-5X-6iG">
+                                                        <rect key="frame" x="124.5" y="0.0" width="125" height="30"/>
+                                                        <state key="normal" title="Call"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8r-iP-bIt">
+                                                        <rect key="frame" x="249.5" y="0.0" width="124.5" height="30"/>
+                                                        <state key="normal" title="Email"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="2Kz-Rg-BHI" secondAttribute="height" multiplier="1:1" constant="1" id="a1B-NF-nvw"/>
-                                    <constraint firstAttribute="width" constant="160" id="tc9-Jo-Jmu"/>
+                                    <constraint firstItem="D29-OG-QNW" firstAttribute="top" secondItem="xFw-zh-iJC" secondAttribute="top" constant="26" id="Ebc-mX-Nxh"/>
+                                    <constraint firstAttribute="bottom" secondItem="D29-OG-QNW" secondAttribute="bottom" constant="8" id="d9A-Ki-s1x"/>
+                                    <constraint firstItem="D29-OG-QNW" firstAttribute="centerX" secondItem="xFw-zh-iJC" secondAttribute="centerX" id="dT6-v8-OHp"/>
+                                    <constraint firstItem="D29-OG-QNW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xFw-zh-iJC" secondAttribute="leading" constant="20" id="lac-YX-VE6"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hasBorder" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="borderShape" value="squircle"/>
-                                </userDefinedRuntimeAttributes>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5B-Tw-UCo" customClass="ProfileNameLabel" customModule="Autolayout" customModuleProvider="target">
-                                <rect key="frame" x="127" y="239" width="160" height="29"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vBQ-YU-dZ9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="I5B-Tw-UCo" firstAttribute="top" secondItem="2Kz-Rg-BHI" secondAttribute="bottom" constant="16" id="1de-E8-kfT"/>
-                            <constraint firstItem="2Kz-Rg-BHI" firstAttribute="top" secondItem="vBQ-YU-dZ9" secondAttribute="top" constant="20" id="Ats-f1-tGE"/>
-                            <constraint firstItem="I5B-Tw-UCo" firstAttribute="width" secondItem="2Kz-Rg-BHI" secondAttribute="width" id="NQf-L2-hJm"/>
-                            <constraint firstItem="vBQ-YU-dZ9" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="I5B-Tw-UCo" secondAttribute="bottom" constant="20" id="Z5N-bf-5cx"/>
-                            <constraint firstItem="2Kz-Rg-BHI" firstAttribute="centerX" secondItem="vBQ-YU-dZ9" secondAttribute="centerX" id="i8O-mX-KhS"/>
-                            <constraint firstItem="I5B-Tw-UCo" firstAttribute="centerX" secondItem="2Kz-Rg-BHI" secondAttribute="centerX" id="ouv-GW-ShI"/>
+                            <constraint firstItem="xFw-zh-iJC" firstAttribute="top" secondItem="iuK-Dw-O2e" secondAttribute="top" constant="44" id="9gL-8Q-0oR"/>
+                            <constraint firstItem="vBQ-YU-dZ9" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="xFw-zh-iJC" secondAttribute="bottom" id="NW0-jl-eyU"/>
+                            <constraint firstItem="xFw-zh-iJC" firstAttribute="leading" secondItem="iuK-Dw-O2e" secondAttribute="leading" id="a8x-8C-ECZ"/>
+                            <constraint firstItem="xFw-zh-iJC" firstAttribute="trailing" secondItem="iuK-Dw-O2e" secondAttribute="trailing" id="fK1-Rj-Amo"/>
                         </constraints>
                     </view>
                     <connections>
@@ -60,6 +113,9 @@
         </designable>
     </designables>
     <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

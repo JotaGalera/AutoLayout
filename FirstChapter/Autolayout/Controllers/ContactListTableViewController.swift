@@ -6,9 +6,9 @@ final class ContactListTableViewController: UITableViewController {
     @IBOutlet var contactPreviewView: ContactPreviewView!
     
     private var contacts: [Contact] = [
-    Contact(name: "John Doe", photo: "rw-logo"),
-    Contact(name: "Jane Doe", photo: "rw-logo"),
-    Contact(name: "Joseph Doe", photo: "rw-logo")]
+    Contact(name: "John Doe", photo: "logo"),
+    Contact(name: "Jane Doe", photo: "logo"),
+    Contact(name: "Joseph Doe", photo: "logo")]
     
     
   // MARK: - Life Cycles
